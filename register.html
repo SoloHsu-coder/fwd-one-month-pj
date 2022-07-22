@@ -1,0 +1,65 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="register.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h1>Wuxia Series</h1>
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Services</li>
+          <li>
+            <button>
+              <a href="login.html"> Login </a>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="container">
+      <form class="signup-form">
+        <h1>Sign Up</h1>
+
+        <div class="input-group">
+          <input type="text" placeholder="Full Name" name="username" />
+        </div>
+        <div class="input-group name-validation"></div>
+        <div class="input-group">
+          <input type="email" placeholder="Email" name="email" />
+        </div>
+        <div class="email-validation"></div>
+        <div class="input-group">
+          <input type="password" placeholder="Password" name="pw" />
+        </div>
+        <div class="password-validation"></div>
+        <div class="input-group">
+          <input
+            type="password"
+            placeholder="Confirm Password"
+            name="pwconfirm"
+          />
+        </div>
+        <div class="pw-confirm"></div>
+        <button class="btn">
+          <a>Submit</a>
+        </button>
+      </form>
+    </div>
+    <footer>
+      <p>Created By @Solo</p>
+      <a href="www.facebook.com"><i class="fab fa-facebook"></i> Facebook</a>
+    </footer>
+    <script src="scripts/register-login.js"></script>
+  </body>
+</html>

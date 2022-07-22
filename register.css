@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  background: url(images/signup3.jpg) no-repeat;
+  background-size: cover;
+}
+header {
+  background-color: rgb(200, 117, 157);
+  opacity: 0.9;
+}
+nav {
+  margin: 0 auto;
+  width: 90%;
+  padding: 1.2em;
+  display: flex;
+  text-shadow: 2px 2px #5b5253;
+  justify-content: space-between;
+  align-items: center;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 3em;
+  cursor: pointer;
+}
+header nav button {
+  background-color: inherit;
+  border: none;
+}
+header nav button a {
+  font-size: 1rem;
+  color: #fff;
+  text-shadow: 2px 2px #5b5253;
+  text-decoration: none;
+}
+.container {
+  width: 40%;
+  margin: 10% auto;
+  padding: 1.5em;
+  text-align: center;
+  border-radius: 8px;
+}
+form h1 {
+  margin-bottom: 1em;
+  text-align: center;
+  font-size: 2rem;
+  color: rgb(192, 67, 127);
+
+  text-shadow: -1px 2px 2px #d81ac5;
+}
+.input-group {
+  margin: 1em auto;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+}
+.input-group input {
+  padding: 1.2em;
+  font-size: 1rem;
+  color: #c942b3;
+  border: 1px solid #b0b0bd;
+  border-radius: 0.5em;
+  box-shadow: 6px 6px 19px -5px #d81ac5;
+}
+input:focus {
+  outline: none;
+}
+
+.btn {
+  padding: 1em 2.5em;
+  margin-top: 1.5em;
+  background-color: rgb(192, 67, 127);
+  border: none;
+  border-radius: 0.5em;
+  cursor: pointer;
+  box-shadow: 6px 6px 19px -5px #d81ac5;
+}
+.btn:hover {
+  background-color: #a93c97;
+}
+form a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+footer {
+  position: fixed;
+  bottom: 0em;
+  width: 100%;
+  text-align: center;
+  text-shadow: 2px 2px #5b5253;
+  background-color: rgb(200, 117, 157);
+}
+footer a {
+  text-decoration: none;
+  color: #fff;
+}
