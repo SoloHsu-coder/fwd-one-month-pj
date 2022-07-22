@@ -12,7 +12,7 @@ loginBtn.addEventListener("click", (e) => {
   let uPwd = loginForm.passwordLogin.value;
 
   if (uEmail == userEmail && uPwd == password) {
-    document.location.href = "main.html";
+    document.location.href = "index.html";
   } else if (uEmail == userEmail || uPwd == password) {
     validation.textContent = "Email or password incorrect";
     validation.style.color = "red";

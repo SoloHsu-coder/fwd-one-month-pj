@@ -18,7 +18,7 @@ submitBtn.addEventListener("click", (e) => {
   //console.log(username, email, pw, pwcon);
   const success = checkValidation(username, email, pw, pwcon);
   if (!success) {
-    document.location.href = "main.html";
+    document.location.href = "index.html";
   }
 });
 
