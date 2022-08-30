@@ -15,11 +15,12 @@ loginBtn.addEventListener("click", (e) => {
     document.location.href = "index.html";
   } else if (uEmail == userEmail || uPwd == password) {
     validation.textContent = "Email or password incorrect";
-    validation.style.color = "red";
+    validation.style.color = "white";
     validation.style.textAlign = "center";
+    validation.style.fontSize = "13px";
   } else {
     validation.textContent = "Email does not exist";
-    validation.style.color = "red";
-    validation.style.textAlign = "center";
+    validation.style.color = "white";
+    validation.style.fontSize = "13px";
   }
 });

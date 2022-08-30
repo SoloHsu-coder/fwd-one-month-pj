@@ -4,14 +4,22 @@
   padding: 0;
   box-sizing: border-box;
 }
+:root {
+  --bg-dark: #02010a;
+  --items-dark: #140152;
+  --card-dark: #04052e;
+  --bg-light: #eb627b;
+}
 body {
   font-family: "Poppins", sans-serif;
   color: #fff;
-  background: url(images/background.webp) no-repeat;
-  background-size: cover;
+  background-color: var(--bg-dark);
+  /* background: url(images/background.webp) no-repeat; */
+  /* background-size: cover; */
 }
 header {
-  background-color: #eb627b;
+  background-color: var(--bg-dark);
+  box-shadow: -2px 5px 6px -2px #fff;
 }
 nav {
   width: 90%;
@@ -29,10 +37,20 @@ nav ul {
   gap: 3em;
   cursor: pointer;
 }
+nav li {
+  border-bottom: 1px solid transparent;
+  padding: 0.5em;
+}
+nav li:hover {
+  border-bottom: 1px solid #fff;
+  /* box-shadow: -2px 5px 6px -2px #fff; */
+}
 header nav button {
-  background-color: inherit;
+  background-color: transparent;
+  padding: 0.5em;
   border: none;
 }
+
 header nav button a {
   font-size: 1rem;
   color: #fff;
@@ -41,7 +59,7 @@ header nav button a {
 }
 .container {
   width: 40%;
-  margin: 15% auto;
+  margin: 7% auto;
   padding: 1.5em;
   text-align: center;
   border-radius: 8px;
@@ -50,11 +68,12 @@ form h1 {
   margin-bottom: 2em;
   text-align: center;
   font-size: 1.5rem;
-  color: #e2adb7;
-  text-shadow: 1px 1px #ff163c;
+  color: #fff;
+  /* text-shadow: 1px 1px #5b5253; */
+  text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.5);
 }
 .input-group {
-  margin: 1em auto;
+  margin: 1.5em auto;
   width: 70%;
   display: flex;
   flex-direction: column;
@@ -63,10 +82,10 @@ form h1 {
 .input-group input {
   padding: 1.2em;
   font-size: 1rem;
-  color: #eb627b;
-  border: 1px solid #b0b0bd;
+  color: var(--items-dark);
+  border: none;
   border-radius: 0.5em;
-  box-shadow: 6px 6px 19px -5px #ff163c;
+  box-shadow: 2px 6px 5px -3px #fff;
 }
 input:focus {
   outline: none;
@@ -77,11 +96,11 @@ input:focus {
   margin-top: 1.5em;
   color: #fff;
   font-size: 1rem;
-  background-color: #ff163c;
+  background-color: inherit;
   border: none;
   border-radius: 0.5em;
   cursor: pointer;
-  box-shadow: 6px 6px 19px -5px #ff163c;
+  box-shadow: 6px 6px 19px -5px #fff;
 }
 .btn a {
   color: #fff;
@@ -89,17 +108,26 @@ input:focus {
   text-decoration: none;
 }
 .btn:hover {
-  background-color: #8f091f;
+  background-color: #06031c;
 }
 footer {
   position: fixed;
   bottom: 1em;
   width: 100%;
+  font-size: 0.8em;
+  padding-top: 0.3em;
   text-align: center;
   text-shadow: 2px 2px #5b5253;
-  background-color: #eb627b;
+  box-shadow: 2px -5px 6px -2px #fff;
+  background-color: var(--bg-dark);
 }
 footer a {
   text-decoration: none;
   color: #fff;
+}
+.register-link {
+  font-size: 0.8em;
+}
+.register-link a {
+  color: rgb(113, 113, 224);
 }

@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto:wght@500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 300ms ease-in-out;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #02010a;
+  color: #fff;
+}
+.main-container {
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  gap: 3em;
+}
+.side-bar {
+  position: relative;
+  width: 30%;
+  height: 100vh;
+  padding: 1em;
+  box-shadow: 5px 0 6px -4px #fff;
+}
+.side-bar a {
+  text-decoration: none;
+  color: inherit;
+}
+.side-bar i {
+  margin-right: 8px;
+}
+.side-bar h3 {
+  margin: 1em 0;
+}
+.collection-list {
+  list-style: none;
+  cursor: pointer;
+}
+.collection-list li {
+  display: flex;
+  align-items: center;
+  /* gap: 1.5em; */
+  justify-content: space-between;
+  margin-bottom: 1em;
+  padding-bottom: 0.5em;
+  border: 1px solid transparent;
+}
+.collection-list span {
+  pointer-events: none;
+}
+.collection-list li:hover {
+  box-shadow: 6px 6px 6px -4px #fff;
+}
+.collection-list img {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  object-fit: cover;
+  pointer-events: none;
+}
+.createBtn {
+  background-color: rgb(113, 113, 224);
+  padding: 1em;
+  width: 100%;
+  border: none;
+  color: #fff;
+  border-radius: 8px;
+}
+.save-items {
+  width: 70%;
+  padding: 1em;
+}
+
+.divider {
+  border: 1px solid grey;
+  margin-bottom: 1em;
+}
+.saved-card {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #04052e;
+  margin-top: 2em;
+  padding: 1em;
+}
+.saved-card:hover {
+  box-shadow: 2px 5px 6px -2px #fff;
+}
+.saved-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+.saved-card h5 {
+  font-size: 1em;
+}
+
+.unsavedBtn {
+  background-color: #02010a;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding: 1em;
+}
+.unsavedBtn:hover {
+  box-shadow: 2px 5px 6px -2px #fff;
+}
+.collection-form {
+  display: none;
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  flex-direction: column;
+  padding: 2em;
+  background-color: rgb(113, 113, 224);
+  border-radius: 8px;
+}
+.collection-form input {
+  width: 100%;
+  padding: 1em;
+  border: none;
+  border-radius: 5px;
+}
+.collection-form input:focus {
+  outline: none;
+}
+/* .btns {
+  display: flex;
+  gap: 1em;
+} */
+
+.collection-form button {
+  width: 50%;
+  margin-top: 1em;
+  padding: 1em 1.5em;
+  border: none;
+  border-radius: 12px;
+  color: rgb(113, 113, 224);
+  align-self: center;
+}
+.no-collection {
+  margin-top: 3em;
+}
+.deleteBtn {
+  background: none;
+  border: none;
+  color: white;
+}
+.deleteBtn i {
+  pointer-events: none;
+}
+.filtered,
+.unsavedCard {
+  display: none;
+}
+
+.showAllBtn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+}

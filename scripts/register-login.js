@@ -27,8 +27,9 @@ function checkValidation(username, email, pw, pwcon) {
 
   if (!usernamePattern.test(username)) {
     nameValidate.textContent = "Username is invalid";
-    nameValidate.style.color = "red";
+    nameValidate.style.color = "white";
     nameValidate.style.textAlign = "center";
+    nameValidate.style.fontSize = "13px";
     flag -= 1;
   } else {
     //console.log("success");
@@ -38,7 +39,8 @@ function checkValidation(username, email, pw, pwcon) {
 
   if (!emailPattern.test(email)) {
     emailValidate.textContent = "Email is invalid";
-    emailValidate.style.color = "red";
+    emailValidate.style.color = "white";
+    emailValidate.style.fontSize = "13px";
     flag -= 1;
   } else {
     //console.log("success");
@@ -48,7 +50,8 @@ function checkValidation(username, email, pw, pwcon) {
 
   if (!pwPattern.test(pw)) {
     pwValidate.textContent = "Password must contain 6 to 10 digits";
-    pwValidate.style.color = "red";
+    pwValidate.style.color = "white";
+    pwValidate.style.fontSize = "13px";
     flag -= 1;
   } else {
     //console.log("success");
@@ -57,7 +60,8 @@ function checkValidation(username, email, pw, pwcon) {
   }
   if (pw !== pwcon) {
     pwConfirm.textContent = "Password does not match";
-    pwConfirm.style.color = "red";
+    pwConfirm.style.color = "white";
+    pwConfirm.style.fontSize = "13px";
     flag -= 1;
   } else {
     pwConfirm.textContent = "";

@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto:wght@500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 300ms ease-in-out;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #04052e;
+  color: #fff;
+}
+.main-container {
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  gap: 3em;
+}
+.side-bar {
+  width: 30%;
+  height: 100vh;
+  padding: 1em;
+
+  /* border-right: 1px solid rgb(113, 113, 224); */
+  box-shadow: 5px 0 6px -4px #fff;
+}
+.side-bar a {
+  text-decoration: none;
+  color: inherit;
+}
+.side-bar i {
+  margin-right: 8px;
+}
+.side-bar h3 {
+  margin: 2em 0;
+  line-height: 1.5em;
+}
+
+.save-items {
+  width: 70%;
+  padding: 1em;
+}
+
+.divider {
+  border: 1px solid grey;
+  margin-bottom: 1em;
+}
+.setting-card {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 2em;
+  padding: 1em;
+}
+.saved-card:hover {
+  box-shadow: 2px 5px 6px -2px #fff;
+}
+.saved-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+.saved-card h5 {
+  font-size: 1em;
+}
+
+.settingBtn {
+  background-color: #04052e;
+  color: #fff;
+
+  border-radius: 5px;
+  padding: 1em;
+}
+.settingBtn:hover {
+  box-shadow: 2px 5px 6px -2px #fff;
+}

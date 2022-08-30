@@ -1,0 +1,92 @@
+[
+  {
+    "id": "1",
+    "img": "https://github.com/SoloHsu98/series-data/blob/main/images/wrtw.jpeg",
+    "name": "Who rules The World",
+    "totalEp": "45"
+  },
+  {
+    "id": "2",
+    "img": "https://github.com/SoloHsu98/series-data/blob/main/images/dos.jpeg",
+    "name": "A dream of Splendor",
+    "totalEp": "45"
+  },
+  {
+    "id": "3",
+    "img": "https://github.com/SoloHsu98/series-data/blob/main/images/jof.jpeg",
+    "name": "Journey of Flower",
+    "totalEp": "45"
+  },
+  {
+    "id": "4",
+    "img": "https://github.com/SoloHsu98/series-data/blob/main/images/chero.jpeg",
+    "name": "Condor Heros",
+    "totalEp": "45"
+  },
+  {
+    "id": "5",
+    "img": "https://github.com/SoloHsu98/series-data/blob/main/images/tlbl.jpg",
+    "name": "The Long Ballad",
+    "totalEp": "45"
+  },
+  {
+    "id": "6",
+    "img": "https://github.com/SoloHsu98/series-data/blob/main/images/wrtw.jpeg",
+    "name": "Who rules The World",
+    "totalEp": "45"
+  },
+  {
+    "id": "7",
+    "img": "https://github.com/SoloHsu98/series-data/blob/main/images/dos.jpeg",
+    "name": "A dream of Splendor",
+    "totalEp": "45"
+  },
+  {
+    "id": "8",
+    "img": "https://github.com/SoloHsu98/series-data/blob/main/images/jof.jpeg",
+    "name": "Journey of Flower",
+    "totalEp": "45"
+  },
+  {
+    "id": "9",
+    "img": "https://github.com/SoloHsu98/series-data/blob/main/images/chero.jpeg",
+    "name": "Condor Heros",
+    "totalEp": "45"
+  },
+  {
+    "id": "10",
+    "img": "https://github.com/SoloHsu98/series-data/blob/main/images/tlbl.jpg",
+    "name": "The Long Ballad",
+    "totalEp": "45"
+  },
+  {
+    "id": "11",
+    "img": "https://github.com/SoloHsu98/series-data/blob/main/images/pb.jpeg",
+    "name": "Pillow Book",
+    "totalEp": "45"
+  },
+  {
+    "id": "12",
+    "img": "https://github.com/SoloHsu98/series-data/blob/main/images/threeLives.jpeg",
+    "name": "Three Lives",
+    "totalEp": "45"
+  },
+  {
+    "id": "13",
+    "img": "https://github.com/SoloHsu98/series-data/blob/main/images/general.jpeg",
+    "name": "General And I",
+    "totalEp": "45"
+  },
+  {
+    "id": "14",
+    "img": "https://github.com/SoloHsu98/series-data/blob/main/images/pa.jpeg",
+    "name": "Princess Agent",
+    "totalEp": "45"
+  },
+  {
+    "id": "15",
+    "img": "https://github.com/SoloHsu98/series-data/blob/main/images/lovelikegalaxy.jpeg",
+    "name": "Love Like Galaxy",
+    "totalEp": "45"
+  }
+]
