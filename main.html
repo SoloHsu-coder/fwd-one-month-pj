@@ -1,0 +1,278 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Series</title>
+    <link rel="stylesheet" href="styles/main.css" />
+    
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+    />
+  </head>
+  <body>
+    <dialog id="modal" class="modal">
+        <button class="modal-closeBtn">&times;</button>
+        <h2 class="modal-title">Select Collection</h2>
+        <form class="modal-form">
+         
+           <ul class="collection-list">
+           <!-- <li>
+            <img src="images/wrtw.jpeg" />
+            <span>Later</span>
+          </li>
+          <li>
+            <img src="images/wrtw.jpeg" />
+            <span>Favourites</span>
+          </li>
+          <li>
+            <img src="images/wrtw.jpeg" />
+            <span>Old Series</span>
+          </li> -->
+        </ul>
+          <button class="createBtn">
+          <i class="fas fa-plus"></i>Create New Collection
+        </button>
+         </form>
+      </dialog>
+    <nav>
+      <div class="container nav-bar">
+        <button class="hambuger-menu">
+          
+          <div class="stroke1"></div>
+          <div class="stroke2"></div>
+          <div class="stroke3"></div>
+         
+          <!-- <i class="fas fa-bars"></i> -->
+        </button>
+        
+        <h1>My Wuxia Series</h1>
+        <ul class="title-list">
+          <li><a href="#trending-series">Trending Series</a></li>
+          <li><a href="#ongoing-series">Ongoing Series</a></li>
+          <li><a href="#popular-series">Popular Series</a></li>
+         
+
+        </ul>
+        <input type="search" placeholder='Search Series' class='search-box'/>
+        <div class="user-profile">
+          <img
+            src="images/User Avatar 1.svg"
+            alt="profile"
+            class="profile-img"
+          />
+          <div class="dropdown">
+            <button class="dropbtn">Solo Hsu</button>
+            <div class="dropdown-content">
+              <a href="setting.html">Account Setting</a>
+              <a href="#">Profile</a>
+              <a href="login.html">Logout</a>
+            </div>
+          </div>
+        
+        </div>
+      </div>
+    </nav>
+    <section class="nav-items">
+      <div class="user-info">
+        <div class="img-theme">
+          <img
+            src="images/User Avatar 1.svg"
+            alt="profile"
+            class="profile-img"
+          />
+          <div class="theme">
+          <i class="fas fa-moon night"></i>
+        <i class="fas fa-sun day"></i>
+        </div>
+          </div>
+          <p>Solo Hsu</p>
+          <p>solohsu@gmail.com</p>
+      </div>
+      <div class="settings">
+        <ul class="settings-list">
+          <li><a href="save.html"><i class="fas fa-bookmark"></i></i>Saved</li></a>
+          <li><a href="setting.html"><i class="fas fa-cog"></i>Setting</li></a>
+          <li><i class="fas fa-user-friends"></i>Invite Friends</li>
+          <li><i class="fas fa-phone-alt"></i>Contact Us</li>
+          <li><i class="fas fa-question-circle"></i></i>Help</li>
+        </ul>
+        <a href="login.html">
+          <button>
+           Logout
+         </button>
+        </a>
+      </div>
+    </section>
+    <div class="container">
+      <section id="trending-series">
+        <button class="title-button">Trending Series</button>
+        <div class="card-container trending">
+          <div class="card">
+            <span hidden>1</span>
+            <button class="save-icon"><i class="far fa-bookmark"></i></button>
+            <img src="images/wrtw.jpeg" alt="wrtw" />
+            
+            <a href="singleSeries.html" class="seriesTitle"
+              >Who rules the world</a
+            >
+            <p>Total Episodes - 45</p>
+           
+          </div>
+          <div class="card">
+            <span hidden>2</span>
+            <button class="save-icon"><i class="far fa-bookmark"></i></button>
+            <img src="images/dos.jpeg" alt="dos" />
+            <a href=" #" class="seriesTitle"
+              >A dream of Splendor</a
+            >
+            <p>Total Episodes - 45</p>
+            
+          </div>
+          <div class="card">
+            <span hidden>3</span>
+            <button class="save-icon"><i class="far fa-bookmark"></i></button>
+            <img src="images/jof.jpeg" alt="jof" />
+            <a href=" #" class="seriesTitle"
+              >Journey of Flower</a
+            >
+            <p>Total Episodes - 45</p>
+            
+          </div>
+          <div class="card">
+            <span hidden>4</span>
+            <button class="save-icon"><i class="far fa-bookmark"></i></button>
+            <img src="images/chero.jpeg" alt="chero" />
+            <a href=" #" class="seriesTitle"> Condor heros </a>
+            <p>Total Episodes - 45</p>
+            
+          </div>
+          <div class="card">
+            <span hidden>5</span>
+            <button class="save-icon"><i class="far fa-bookmark"></i></button>
+            <img src="images/tlbl.jpg" alt="chero" />
+            <a href=" #" class="seriesTitle">
+              The Long Ballad
+            </a>
+            <p>Total Episodes - 45</p>
+            
+          </div>
+        </div>
+      </section>
+      <section id="popular-series">
+        <button class="title-button">Popular Series</button>
+        <div class="card-container">
+          <div class="card">
+            <span hidden>6</span>
+            <button class="save-icon"><i class="far fa-bookmark"></i></button>
+            
+            <img src="images/wrtw.jpeg" alt="wrtw" />
+            <a href=" #" class="seriesTitle"
+              >Who rules the world</a
+            >
+            <p>Total Episodes - 45</p>
+           
+          </div>
+          <div class="card">
+            <span hidden>7</span>
+            <button class="save-icon"><i class="far fa-bookmark"></i></button>
+            <img src="images/dos.jpeg" alt="dos" />
+            <a href=" #" class="seriesTitle"
+              >A dream of Splendor</a
+            >
+            <p>Total Episodes - 45</p>
+            
+          </div>
+          <div class="card">
+            <span hidden>8</span>
+            <button class="save-icon"><i class="far fa-bookmark"></i></button>
+            <img src="images/jof.jpeg" alt="jof" />
+            <a href=" #" class="seriesTitle"
+              >Journey of Flower</a
+            >
+            <p>Total Episodes - 45</p>
+            
+          </div>
+          <div class="card">
+            <span hidden>9</span>
+            <button class="save-icon"><i class="far fa-bookmark"></i></button>
+            <img src="images/chero.jpeg" alt="chero" />
+            <a href=" #" class="seriesTitle"> Condor heros </a>
+            <p>Total Episodes - 45</p>
+            
+          </div>
+          <div class="card">
+            <span hidden>10</span>
+            <button class="save-icon"><i class="far fa-bookmark"></i></button>
+            <img src="images/tlbl.jpg" alt="chero" />
+            <a href=" #" class="seriesTitle">
+              The Long Ballad
+            </a>
+            <p>Total Episodes - 45</p>
+            
+          </div>
+        </div>
+      </section>
+      <section id="ongoing-series">
+        <button class="title-button">Ongoing Series</button>
+        <div class="card-container">
+          <div class="card">
+            <span hidden>11</span>
+            <button class="save-icon"><i class="far fa-bookmark"></i></button>
+            
+            <img src="images/pb.jpeg" alt="pb" />
+            <a href=" #" class="seriesTitle">Pillow Book</a>
+            <p>Total Episodes - 45</p>
+            
+          </div>
+          <div class="card">
+            <span hidden>12</span>
+             <button class="save-icon"><i class="far fa-bookmark"></i></button>
+            <img src="images/threeLives.jpeg" alt="threeLives" />
+            <a href=" #" class="seriesTitle">Three lives</a>
+            <p>Total Episodes - 45</p>
+            
+          </div>
+          <div class="card">
+            <span hidden>13</span>
+            <button class="save-icon"><i class="far fa-bookmark"></i></button>
+            <img src="images/general.jpeg" alt="general" />
+            <a href=" #" class="seriesTitle">General and I</a>
+            <p>Total Episodes - 45</p>
+            
+          </div>
+          <div class="card">
+            <span hidden>14</span>
+            <button class="save-icon"><i class="far fa-bookmark"></i></button>
+            <img src="images/pa.jpeg" alt="pa" />
+            <a href=" #" class="seriesTitle"> Princess Agent </a>
+            <p>Total Episodes - 45</p>
+            
+          </div>
+          <div class="card">
+            <span hidden>15</span>
+            <button class="save-icon"><i class="far fa-bookmark"></i></button>
+            <img src="images/lovelikegalaxy.jpeg" alt="pa" />
+            <a href=" #" class="seriesTitle"> Princess Agent </a>
+            <p>Total Episodes - 45</p>
+            
+          </div>
+        </div>
+         
+        </div>
+      </section>
+    </div>
+    <footer>
+      <p>Created By @Solo</p>
+      <a href="www.facebook.com"><i class="fab fa-facebook"></i> Facebook</a>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    
+  </body>
+</html>

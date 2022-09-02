@@ -107,12 +107,12 @@ saveIcons.forEach((saveIcon) => {
       });
       savedCardId.push(cardId);
       console.log(savedCardId);
-      //localStorage.setItem("save.cardIds", savedCardId);
+      localStorage.setItem("save.cardIds", savedCardId);
     });
   });
 });
 //console.log("savedCardId", savedCardId);
-
+//console.log("id", localStorage.getItem("save.cardIds", savedCardId));
 // close modal
 modalClose.addEventListener("click", () => {
   modal.close();
