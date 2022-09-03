@@ -33,6 +33,11 @@ body {
 .side-bar h3 {
   margin: 1em 0;
 }
+.divider {
+  border: 1px solid grey;
+  margin-bottom: 1em;
+}
+
 .collection-list {
   list-style: none;
   cursor: pointer;
@@ -58,55 +63,6 @@ body {
   border-radius: 12px;
   object-fit: cover;
   pointer-events: none;
-}
-.createBtn {
-  background-color: rgb(113, 113, 224);
-  padding: 1em;
-  width: 100%;
-  border: none;
-  color: #fff;
-  border-radius: 8px;
-}
-.save-items {
-  width: 70%;
-  padding: 1em;
-}
-
-.divider {
-  border: 1px solid grey;
-  margin-bottom: 1em;
-}
-.saved-card {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #04052e;
-  margin-top: 2em;
-  padding: 1em;
-}
-.saved-card:hover {
-  box-shadow: 2px 5px 6px -2px #fff;
-}
-.saved-card img {
-  width: 100px;
-  height: 100px;
-  border-radius: 12px;
-  object-fit: cover;
-}
-.saved-card h5 {
-  font-size: 1em;
-}
-
-.unsavedBtn {
-  background-color: #02010a;
-  color: #fff;
-  border: 1px solid #fff;
-  border-radius: 5px;
-  padding: 1em;
-}
-.unsavedBtn:hover {
-  box-shadow: 2px 5px 6px -2px #fff;
 }
 .collection-form {
   display: none;
@@ -141,6 +97,52 @@ body {
   color: rgb(113, 113, 224);
   align-self: center;
 }
+.createBtn {
+  background-color: rgb(113, 113, 224);
+  padding: 1em;
+  width: 100%;
+  border: none;
+  color: #fff;
+  border-radius: 8px;
+}
+.save-items {
+  width: 70%;
+  padding: 1em;
+}
+
+.saved-card {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #04052e;
+  margin-top: 2em;
+  padding: 1em;
+}
+.saved-card:hover {
+  box-shadow: 2px 5px 6px -2px #fff;
+}
+.saved-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+.saved-card h5 {
+  font-size: 1em;
+}
+
+.unsavedBtn {
+  background-color: #02010a;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding: 1em;
+}
+.unsavedBtn:hover {
+  box-shadow: 2px 5px 6px -2px #fff;
+}
+
 .no-collection {
   margin-top: 3em;
 }

@@ -10,18 +10,16 @@
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
     />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
-    />
   </head>
   <body>
-    <dialog id="modal" class="modal">
+      <!-- modals -->
+    <!-- <div class="modal-container"> -->
+      <dialog id="modal" class="modal">
         <button class="modal-closeBtn">&times;</button>
         <h2 class="modal-title">Select Collection</h2>
         <form class="modal-form">
          
-           <ul class="collection-list">
+          <ul class="collection-list">
            <!-- <li>
             <img src="images/wrtw.jpeg" />
             <span>Later</span>
@@ -34,14 +32,30 @@
             <img src="images/wrtw.jpeg" />
             <span>Old Series</span>
           </li> -->
-        </ul>
+          </ul>
           <button class="createBtn">
-          <i class="fas fa-plus"></i>Create New Collection
-        </button>
-         </form>
+            <i class="fas fa-plus"></i>Create New Collection
+          </button>
+        </form>
       </dialog>
+     <!-- create new collection form -->
+      <form class="collection-form">
+          <input
+            type="text"
+            placeholder="Collection Name"
+            class="collection-name"
+            
+          />
+          <div class="btns">
+            <button class="savedBtn">Save</button>
+            <button class="cancelBtn">Close</button>
+          </div>
+        
+      </form>
+    <!-- </div> -->
+    <!-- nav section -->
     <nav>
-      <div class="container nav-bar">
+      <div class="main-container nav-bar">
         <button class="hambuger-menu">
           
           <div class="stroke1"></div>
@@ -56,8 +70,6 @@
           <li><a href="#trending-series">Trending Series</a></li>
           <li><a href="#ongoing-series">Ongoing Series</a></li>
           <li><a href="#popular-series">Popular Series</a></li>
-         
-
         </ul>
         <input type="search" placeholder='Search Series' class='search-box'/>
         <div class="user-profile">
@@ -78,6 +90,7 @@
         </div>
       </div>
     </nav>
+    <!-- side bar section -->
     <section class="nav-items">
       <div class="user-info">
         <div class="img-theme">
@@ -87,13 +100,14 @@
             class="profile-img"
           />
           <div class="theme">
-          <i class="fas fa-moon night"></i>
-        <i class="fas fa-sun day"></i>
-        </div>
+            <i class="fas fa-moon night"></i>
+            <i class="fas fa-sun day"></i>
           </div>
+        </div>
           <p>Solo Hsu</p>
           <p>solohsu@gmail.com</p>
       </div>
+
       <div class="settings">
         <ul class="settings-list">
           <li><a href="save.html"><i class="fas fa-bookmark"></i></i>Saved</li></a>
@@ -109,7 +123,10 @@
         </a>
       </div>
     </section>
-    <div class="container">
+
+    <!-- main section -->
+    <div class="main-container">
+      <!-- trending section -->
       <section id="trending-series">
         <button class="title-button">Trending Series</button>
         <div class="card-container trending">
@@ -164,6 +181,8 @@
           </div>
         </div>
       </section>
+
+      <!-- popular section -->
       <section id="popular-series">
         <button class="title-button">Popular Series</button>
         <div class="card-container">
@@ -218,6 +237,8 @@
           </div>
         </div>
       </section>
+
+      <!-- ongoing section -->
       <section id="ongoing-series">
         <button class="title-button">Ongoing Series</button>
         <div class="card-container">
@@ -262,8 +283,6 @@
             <p>Total Episodes - 45</p>
             
           </div>
-        </div>
-         
         </div>
       </section>
     </div>

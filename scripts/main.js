@@ -14,8 +14,12 @@ const savedSeries = document.querySelectorAll("span");
 const modal = document.querySelector("#modal");
 const modalClose = document.querySelector(".modal-closeBtn");
 const collectionList = document.querySelector(".collection-list");
-
+const createCollectionBtn = document.querySelector(".createBtn");
+const form = document.querySelector(".collection-form");
+const cancelBtn = document.querySelector(".cancelBtn");
+const collectionName = document.querySelector(".collection-name");
 let savedCardId = [];
+let allCollections = [];
 //for search
 searchInput.addEventListener("keyup", (e) => {
   //console.log(e.target.value);
@@ -69,6 +73,20 @@ light.addEventListener("click", (e) => {
 window.addEventListener("DOMContentLoaded", () => {
   showAllCollections();
 });
+function showAllCollections() {
+  const collectionsData = getCollection();
+  if (collectionsData?.length > 0) {
+    collectionsData.forEach((collection) => {
+      addCollections(collection);
+    });
+  }
+}
+function getCollection() {
+  if (localStorage.getItem("series.collections")) {
+    allCollections = JSON.parse(localStorage.getItem("series.collections"));
+  }
+  return allCollections;
+}
 
 //for Save
 function addCollections(collection) {
@@ -90,50 +108,45 @@ saveIcons.forEach((saveIcon) => {
     const savedCard = btn.parentElement;
     modal.showModal();
 
-    const selectedCollection = document.querySelectorAll(".single-collection");
-    selectedCollection.forEach((selected) => {
-      selected.addEventListener("click", (e) => {
-        const collectionId = e.target.firstElementChild.textContent;
-        // const addId = document.createElement("span");
-        // addId.setAttribute("hidden", "hidden");
-        // addId.setAttribute("id", "collectionId");
-        // addId.textContent = collectionId;
-        // savedCard.appendChild(addId);
+    const allCollections = document.querySelectorAll(".single-collection");
+    allCollections.forEach((collection) => {
+      collection.addEventListener("click", (e) => {
+        const selectedId = e.target.firstElementChild.textContent;
 
+        const addId = document.createElement("span");
+        addId.setAttribute("hidden", "hidden");
+        addId.setAttribute("id", "collectionId");
+        addId.textContent = selectedId;
+
+        savedCard.appendChild(addId);
         const icon = btn.closest(".save-icon");
         icon.innerHTML = `<i class="fas fa-bookmark"></i>`;
 
         modal.close();
       });
-      savedCardId.push(cardId);
-      console.log(savedCardId);
-      localStorage.setItem("save.cardIds", savedCardId);
     });
   });
 });
-//console.log("savedCardId", savedCardId);
-//console.log("id", localStorage.getItem("save.cardIds", savedCardId));
+
 // close modal
 modalClose.addEventListener("click", () => {
+  form.style.display = "none";
   modal.close();
 });
 
-function getCollection() {
-  if (localStorage.getItem("series.collections")) {
-    allCollections = JSON.parse(localStorage.getItem("series.collections"));
-  }
-  return allCollections;
-}
+//for create new collection
 
-function showAllCollections() {
-  const collectionsData = getCollection();
-  if (collectionsData?.length > 0) {
-    collectionsData.forEach((collection) => {
-      addCollections(collection);
-    });
-  }
-}
-// collectionList.addEventListener("click", (e) => {
-//   const id = document.querySelectorAll("#id");
-//   id.forEach((item) => console.log(item));
-// });
+createCollectionBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  form.style.display = "flex";
+});
+cancelBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  console.log("click");
+  form.style.display = "none";
+});
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  console.log(collectionName.value);
+});
