@@ -145,6 +145,9 @@ body {
 
 .no-collection {
   margin-top: 3em;
+  margin-bottom: 3em;
+  text-align: center;
+  /* pointer-events: none; */
 }
 .deleteBtn {
   background: none;

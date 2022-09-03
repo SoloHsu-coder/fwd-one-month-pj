@@ -9,6 +9,7 @@ const saveCardIds = document.querySelectorAll("span");
 const saveCardsContainer = document.querySelector(".save-items");
 const allSaveCard = document.querySelectorAll(".saved-card");
 const showAllBtn = document.querySelector(".showAllBtn");
+const noCollection = document.querySelector(".no-collection");
 // const collections = [
 //   { id: 1, name: "Later" },
 //   { id: 2, name: "Favourites" },
@@ -52,9 +53,9 @@ function showAllCollections() {
       addCollectionsToSideBar(collection);
     });
   } else {
-    collectionList.innerHTML = `<li class='no-collection'>
+    noCollection.innerHTML = `<p class='no-collection'>
         <span ><i class="fas fa-times"></i>No Collections</span>
-    </li>
+    </p>
   `;
   }
 }
@@ -72,6 +73,7 @@ form.addEventListener("submit", (e) => {
   console.log(e.target.value);
   e.preventDefault();
   if (collectionName.value.length > 0) {
+    noCollection.innerHTML = "";
     console.log(collectionName.value);
     const newCollection = new Collections(collectionName.value);
     console.log(newCollection);
