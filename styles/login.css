@@ -19,12 +19,12 @@ body {
 }
 header {
   background-color: var(--bg-dark);
-  box-shadow: -2px 5px 6px -2px #fff;
+  box-shadow: 2px 4px 3px -2px #fff;
 }
 nav {
-  width: 90%;
+  width: 92%;
   margin: 0 auto;
-  padding: 1.2em;
+  padding: 1em 0em;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -97,10 +97,10 @@ input:focus {
   color: #fff;
   font-size: 1rem;
   background-color: inherit;
-  border: none;
   border-radius: 0.5em;
   cursor: pointer;
-  box-shadow: 6px 6px 19px -5px #fff;
+  border: 1px solid grey;
+  box-shadow: 3px 3px 9px -3px #fff;
 }
 .btn a {
   color: #fff;
@@ -112,18 +112,24 @@ input:focus {
 }
 footer {
   position: fixed;
+  display: flex;
+  justify-content: space-between;
   bottom: 1em;
   width: 100%;
   font-size: 0.8em;
-  padding-top: 0.3em;
+  padding-top: 0.5em;
   text-align: center;
   text-shadow: 2px 2px #5b5253;
-  box-shadow: 2px -5px 6px -2px #fff;
+  box-shadow: 2px -4px 3px -2px #fff;
   background-color: var(--bg-dark);
 }
 footer a {
   text-decoration: none;
   color: #fff;
+  margin-right: 5em;
+}
+footer p {
+  margin-left: 5em;
 }
 .register-link {
   font-size: 0.8em;

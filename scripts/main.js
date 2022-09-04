@@ -6,8 +6,8 @@ const dark = document.querySelector(".night");
 const light = document.querySelector(".day");
 const nav = document.querySelector("nav");
 const cards = document.querySelectorAll(".card");
-const title = document.querySelectorAll("h4");
-const footer = document.querySelector("footer");
+const title = document.querySelectorAll(".title-button");
+const footer = document.querySelector(".footer-section");
 const card = document.querySelector(".card");
 const saveIcons = document.querySelectorAll(".save-icon");
 const savedSeries = document.querySelectorAll("span");
@@ -57,16 +57,18 @@ dark.addEventListener("click", (e) => {
 });
 
 light.addEventListener("click", (e) => {
-  document.body.style.background = "url(images/lightBg.jpeg) no-repeat ";
-  document.body.style.backgroundSize = "cover";
-  nav.style.background = "#eb627b";
-  footer.style.background = "#eb627b";
-  navItems.style.background = "#eb627b";
+  document.body.style.background = "#F3BAD6";
+  document.body.style.fontWeight = "500";
+  nav.style.background = "#EA86B6";
+  footer.style.background = "#EA86B6";
+  navItems.style.background = "#EA86B6";
   cards.forEach((card) => {
-    card.style.background = "#eb627b";
+    card.style.background = "#EA86B6";
+    card.style.border = "none";
   });
   title.forEach((header) => {
-    header.style.background = "#eb627b";
+    header.style.background = "#EA86B6";
+    header.style.border = "none";
   });
 });
 

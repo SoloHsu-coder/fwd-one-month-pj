@@ -20,11 +20,11 @@ body {
 
 header {
   background-color: var(--bg-dark);
-  box-shadow: -2px 5px 6px -2px #fff;
+  box-shadow: 2px 4px 3px -2px #fff;
 }
 nav {
   margin: 0 auto;
-  width: 90%;
+  width: 92%;
   padding: 1em;
   display: flex;
   text-shadow: 2px 2px #5b5253;
@@ -75,7 +75,7 @@ form h1 {
   font-size: 1.5rem;
   color: #fff;
   /* text-shadow: 1px 1px #5b5253; */
-  text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.5);
+  /* text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.5); */
 }
 .input-group {
   margin: 1.2em auto;
@@ -102,10 +102,10 @@ input:focus {
   color: #fff;
   font-size: 1rem;
   background-color: inherit;
-  border: none;
+  border: 1px solid grey;
   border-radius: 0.5em;
   cursor: pointer;
-  box-shadow: 6px 6px 19px -5px #fff;
+  box-shadow: 3px 3px 9px -3px #fff;
 }
 .btn:hover {
   background-color: #06031c;
@@ -118,16 +118,22 @@ form a {
 
 footer {
   position: fixed;
+  display: flex;
+  justify-content: space-between;
   bottom: 1em;
   width: 100%;
   font-size: 0.8em;
-  padding-top: 0.3em;
+  padding-top: 0.5em;
   text-align: center;
   text-shadow: 2px 2px #5b5253;
-  box-shadow: 2px -5px 6px -2px #fff;
+  box-shadow: 2px -4px 3px -2px #fff;
   background-color: var(--bg-dark);
 }
 footer a {
   text-decoration: none;
   color: #fff;
+  margin-right: 5em;
+}
+footer p {
+  margin-left: 5em;
 }

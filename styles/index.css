@@ -67,7 +67,7 @@ body {
 .hero-section {
   display: flex;
   gap: 4em;
-  margin-top: 4rem;
+  margin-top: 3em;
   align-items: center;
 }
 .info {
@@ -94,22 +94,23 @@ body {
   font-size: 1rem;
   font-weight: 600;
 }
-.last-section {
+.first-hero-section {
   background-color: #e4aec5;
   text-align: center;
-  margin-top: 4em;
-  margin-bottom: 4em;
-  padding: 2rem;
+  margin-top: 3em;
+  margin-bottom: 3em;
+  padding: 0.5em;
   font-weight: 400;
 }
 
 .exploreBtn {
+  display: inline-block;
   border: none;
-  background-color: inherit;
+  background-color: #fad9e6;
   color: inherit;
-  margin-top: 2em;
+  margin: 2em 0em;
   padding: 1em 2em;
-  border: 1px solid transparent;
+  border: 1px solid #243d25;
 }
 .footer-section {
   position: fixed;
@@ -133,15 +134,11 @@ body {
 }
 
 .exploreBtn:hover {
-  border: 1px solid #243d25;
   box-shadow: 3px 6px 6px -2px #eb627b;
-}
-.exploreBtn a {
+  text-decoration: none;
   color: inherit;
 }
-.exploreBtn a:hover {
-  text-decoration: none;
-}
+
 .exploreBtn i {
   margin-left: 12px;
 }
