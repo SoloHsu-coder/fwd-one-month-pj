@@ -6,16 +6,17 @@ const collectionName = document.querySelector(".collectionName");
 const collectionList = document.querySelector(".collection-list");
 const deleteBtn = document.querySelector(".deleteBtn");
 const saveCardIds = document.querySelectorAll("span");
-const saveCardsContainer = document.querySelector(".save-items");
-const allSaveCard = document.querySelectorAll(".saved-card");
 const showAllBtn = document.querySelector(".showAllBtn");
 const noCollection = document.querySelector(".no-collection");
+const saveCardsContainer = document.querySelector(".save-card-container");
+
 // const collections = [
 //   { id: 1, name: "Later" },
 //   { id: 2, name: "Favourites" },
 //   { id: 3, name: "Old Series" },
 // ];
 let allCollections = [];
+let allSavedCard = [];
 class Collections {
   constructor(name) {
     this.name = name;
@@ -25,6 +26,7 @@ class Collections {
 
 window.addEventListener("DOMContentLoaded", () => {
   showAllCollections();
+  showSaveCards();
 });
 
 function getCollection() {
@@ -34,13 +36,40 @@ function getCollection() {
   return allCollections;
 }
 
+function getAllSaveCards() {
+  if (localStorage.getItem("series.savedCard")) {
+    allSavedCard = JSON.parse(localStorage.getItem("series.savedCard"));
+  }
+  return allSavedCard;
+}
+
+function showSaveCards() {
+  const savingCard = getAllSaveCards();
+  if (savingCard.length > 0) {
+    savingCard.forEach((card) => {
+      addSaveCardToContainer(card);
+    });
+  }
+}
+function addSaveCardToContainer(card) {
+  const newCardUI = document.createElement("div");
+  newCardUI.classList.add("saved-card");
+  newCardUI.innerHTML = `
+  <span hidden>${card.cardId}</span>
+  <img src=${card.img} />
+     <h5>${card.title}</h5>
+    <button class="unsavedBtn">Unsave</button>
+    <span hidden>1967</span>
+  `;
+  saveCardsContainer.appendChild(newCardUI);
+}
 function addCollectionsToSideBar(collection) {
   // collectionList.innerHTML = "";
   const newCollectionUI = document.createElement("li");
   newCollectionUI.innerHTML = `
   <small hidden>${collection.id}</small>
                   <img src="images/wrtw.jpeg" />
-                  <span>${collection.name}</span>
+                  <span class='collection-name'>${collection.name}</span>
                    <button class='deleteBtn'><i class="fas fa-trash"></i></button>
               `;
   collectionList.appendChild(newCollectionUI);
@@ -69,6 +98,7 @@ function removeCollection(id) {
   collections = collections.filter((item) => item.id !== id);
   localStorage.setItem("series.collections", JSON.stringify(collections));
 }
+
 form.addEventListener("submit", (e) => {
   console.log(e.target.value);
   e.preventDefault();
@@ -105,21 +135,21 @@ collectionList.addEventListener("click", (e) => {
   } else {
     const currentCollectionId = e.target.firstElementChild.textContent;
     filterSeriesByCollection(currentCollectionId);
-    //console.log(currentCollectionId);
   }
 });
 
 function filterSeriesByCollection(id) {
-  console.log(id);
-  allSaveCard.forEach((saveCard) => {
-    if (saveCard.lastElementChild.textContent != id) {
-      saveCard.classList.add("filtered");
+  const allCards = document.querySelectorAll(".saved-card");
+  allCards.forEach((card) => {
+    if (card.lastElementChild.textContent != id) {
+      card.classList.add("filtered");
     } else {
-      saveCard.classList.remove("filtered");
+      card.classList.remove("filtered");
     }
   });
 }
 showAllBtn.addEventListener("click", (e) => {
+  const allSaveCard = document.querySelectorAll(".saved-card");
   allSaveCard.forEach((saveCard) => {
     if (saveCard.classList.contains("filtered")) {
       saveCard.classList.remove("filtered");
@@ -127,10 +157,15 @@ showAllBtn.addEventListener("click", (e) => {
   });
 });
 
-unsaveBtn.forEach((unsave) => {
-  unsave.addEventListener("click", (e) => {
-    const unsaveCard = e.target.parentElement;
-    const unsaveId = unsaveCard.lastElementChild.textContent;
-    unsaveCard.classList.add("unsavedCard");
-  });
+saveCardsContainer.addEventListener("click", (e) => {
+  if (e.target.classList.contains("unsavedBtn")) {
+    const cardId = e.target.parentElement.firstElementChild.textContent;
+    removeSaveCardFromLocalStorage(cardId);
+    e.target.parentElement.remove();
+  }
 });
+function removeSaveCardFromLocalStorage(id) {
+  let saveCards = getAllSaveCards();
+  saveCards = saveCards.filter((item) => item.cardId != id);
+  localStorage.setItem("series.savedCard", JSON.stringify(saveCards));
+}
